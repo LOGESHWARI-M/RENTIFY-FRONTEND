@@ -1,0 +1,49 @@
+<div class="property-card-container">
+  <div *ngFor="let property of properties" class="property-card-wrapper">
+    <mat-card class="property-card">
+      <mat-card-header>
+        <mat-card-title>Property Details</mat-card-title>
+        <div style="margin-left: 200px;" *ngIf="isSeller">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="updatePost(property)">
+              <mat-icon>edit</mat-icon>
+              <span>Update</span>
+            </button>
+            <button mat-menu-item (click)="deletePost(property._id)">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="property-details">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>{{property.p_name}}</h1>
+            <mat-icon 
+              *ngIf="!isSeller" 
+              (click)="onThumbUpClick(property.id)" 
+              [class.clicked]="likedPropertyId === property.id" 
+              class="clickable-icon">
+              thumb_up
+            </mat-icon>
+          </div>
+          <p><strong>Place:</strong> {{ property.place }}</p>
+          <p><strong>Area:</strong> {{ property.area }} sq ft</p>
+          <p><strong>Number of Bedrooms:</strong> {{ property.nob }}</p>
+          <p><strong>Number of Bathrooms:</strong> {{ property.nor }}</p>
+          <p><strong>Hospitals Nearby:</strong> {{ property.h_nearby }}</p>
+          <p><strong>Colleges Nearby:</strong> {{ property.c_nearby }}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="contact-details">
+          <p><strong>Owner Name:</strong> {{ property.o_name }}</p>
+          <p><strong>Contact:</strong> {{ property.contact }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

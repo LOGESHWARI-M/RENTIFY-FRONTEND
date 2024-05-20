@@ -1,0 +1,54 @@
+.container {
+  margin-top: 200px;
+}
+
+mat-card {
+  width: 30%;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%!important;
+  margin-top: 25px;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+input {
+  width: 100%;
+  margin: auto;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.button button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin: auto;
+}
+
+::ng-deep .mdc-text-field--outlined {
+  border-color: rgb(0, 255, 166) !important;
+}

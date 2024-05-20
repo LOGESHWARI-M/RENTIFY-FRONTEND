@@ -1,0 +1,67 @@
+<div class="container">
+
+    <mat-card>
+        <mat-card-title>Enter your property details</mat-card-title>
+        <button mat-button cl [routerLink]="''">Go Back</button>
+        <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <mat-form-field style="width: 95%;margin-left: 25px;" appearance="outline">
+                    <mat-label>Property Name</mat-label>
+                    <input type="text" matInput formControlName="p_name">
+                    <mat-error *ngIf="form.get('p_name')?.hasError('required')">Property Name is required</mat-error>
+                </mat-form-field>
+                <div style="display: flex;justify-content: space-between;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Place</mat-label>
+                        <input type="text" matInput formControlName="place">
+                        <mat-error *ngIf="form.get('place')?.hasError('required')">Place is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Area</mat-label>
+                        <input type="text" matInput formControlName="area"> 
+                        <mat-error *ngIf="form.get('area')?.hasError('required')">Area is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex;justify-content: space-between;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Number of restrooms</mat-label>
+                        <input type="number" matInput formControlName="nor">
+                        <mat-error *ngIf="form.get('nor')?.hasError('required')">it is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Number of bedrooms</mat-label>
+                        <input type="number" matInput formControlName="nob">
+                        <mat-error *ngIf="form.get('nob')?.hasError('required')">it is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex;justify-content: space-between;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Hospitals Nearby</mat-label>
+                        <input type="text" matInput formControlName="h_nearby">
+                        <mat-error *ngIf="form.get('h_nearby')?.hasError('required')">it is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>College Nearby</mat-label>
+                        <input type="text" matInput formControlName="c_nearby">
+                        <mat-error *ngIf="form.get('c_nearby')?.hasError('required')">College Nearby is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex;justify-content: space-between;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Owner Name</mat-label>
+                        <input type="text" matInput formControlName="o_name">
+                        <mat-error *ngIf="form.get('o_name')?.hasError('required')">Owner is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contact</mat-label>
+                        <input type="number" matInput formControlName="contact">
+                        <mat-error *ngIf="form.get('contact')?.hasError('required')">Contact is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <span class="button">
+                    <button type="submit" [disabled]="form.invalid" cl mat-button>{{isUpdate ? "Update Property" : "Register Property"}}</button>
+                </span>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

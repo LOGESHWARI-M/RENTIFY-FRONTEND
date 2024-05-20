@@ -1,0 +1,36 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+mat-card {
+    margin-top: 100px;
+}
+
+mat-card-title{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+form {
+    margin-top: 50px;
+}
+div mat-form-field {
+    width: 45%;
+    margin: auto;
+}
+
+.button {
+    width: 100%;
+    margin: auto;
+}
+.button button {
+    display: flex!important;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    width: 300px;
+    font-size: 20px;
+    margin: 20px 0px;
+    margin-left: 550px;
+}

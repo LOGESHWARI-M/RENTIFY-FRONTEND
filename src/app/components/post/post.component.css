@@ -1,0 +1,67 @@
+.property-card {
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-card-header {
+    background-color: #3f51b5;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 16px;
+  }
+  
+  mat-card-title {
+    font-size: 1.5em;
+  }
+  
+  mat-card-content {
+    padding: 16px;
+  }
+  
+  .property-details p,
+  .contact-details p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  mat-divider {
+    margin: 16px 0;
+  }
+  
+  .contact-details p {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .property-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .property-card-wrapper {
+    width: calc(33.33% - 20px); 
+    margin-bottom: 20px;
+  }
+  
+  .property-card {
+    width: 100%;
+  }
+
+  .clickable-icon {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .clickable-icon:hover {
+    color: #1976d2;
+  }
+  
+  .clickable-icon.clicked {
+    color: #ff5722;
+  }
+  
