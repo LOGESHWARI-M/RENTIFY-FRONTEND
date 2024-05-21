@@ -5,7 +5,7 @@
         <button mat-button cl [routerLink]="''">Go Back</button>
         <mat-card-content>
             <form [formGroup]="form" (ngSubmit)="submit()">
-                <mat-form-field style="width: 95%;margin-left: 25px;" appearance="outline">
+                <mat-form-field style="width: 95%;margin-left: 35px;" appearance="outline">
                     <mat-label>Property Name</mat-label>
                     <input type="text" matInput formControlName="p_name">
                     <mat-error *ngIf="form.get('p_name')?.hasError('required')">Property Name is required</mat-error>
@@ -17,8 +17,8 @@
                         <mat-error *ngIf="form.get('place')?.hasError('required')">Place is required</mat-error>
                     </mat-form-field>
                     <mat-form-field appearance="outline">
-                        <mat-label>Area</mat-label>
-                        <input type="text" matInput formControlName="area"> 
+                        <mat-label>Area(sqft)</mat-label>
+                        <input type="number" matInput formControlName="area"> 
                         <mat-error *ngIf="form.get('area')?.hasError('required')">Area is required</mat-error>
                     </mat-form-field>
                 </div>

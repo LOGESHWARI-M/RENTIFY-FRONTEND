@@ -19,7 +19,7 @@ export class RegisterComponent {
   hide = true;
 
   form: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     first_name: new FormControl('', [Validators.required]),
     last_name: new FormControl(''),
     mobile: new FormControl(null,[Validators.required]),

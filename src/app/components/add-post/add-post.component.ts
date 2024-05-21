@@ -15,6 +15,11 @@ export class AddPostComponent implements OnInit{
   updateId = '';
 
   constructor(private router: Router, private api: APIService){
+    const login = sessionStorage.getItem("isLogin");
+    if(!login){
+      router.navigate(['/login']);
+    }
+    
     this.form = new FormGroup({
       p_name: new FormControl('', [Validators.required]),
       place: new FormControl('', [Validators.required]),

@@ -2,8 +2,8 @@
   <div *ngFor="let property of properties" class="property-card-wrapper">
     <mat-card class="property-card">
       <mat-card-header>
-        <mat-card-title>Property Details</mat-card-title>
-        <div style="margin-left: 200px;" *ngIf="isSeller">
+        <mat-card-title style="margin-right: 200px;width: 100%;">Property Details</mat-card-title>
+        <div *ngIf="isSeller">
           <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
             <mat-icon>more_vert</mat-icon>
           </button>

@@ -13,7 +13,10 @@ export class HomeComponent implements OnInit{
   userId = '';
 
   constructor(private router: Router){
-    
+    const login = sessionStorage.getItem("isLogin");
+    if(!login){
+      router.navigate(['/login']);
+    }
   }
 
   ngOnInit(): void {

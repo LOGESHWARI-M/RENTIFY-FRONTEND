@@ -18,7 +18,7 @@ export class LoginComponent {
   hide = true;
 
   form: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
 
@@ -28,6 +28,7 @@ export class LoginComponent {
         if (res?._id) {
           sessionStorage.setItem("user", JSON.stringify(res));
           this.router.navigate(['']);
+          sessionStorage.setItem('isLogin', "yes");
         }
       },
       (error) => {
